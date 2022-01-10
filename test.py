@@ -1,4 +1,2 @@
-a = 'abdcfed'
-b = 'af'
-if b in a:
-    print(1)
+a = [[0,1,2,3,4],[13,12,14,15,16]]
+print(max(max(a)))
