@@ -9,7 +9,7 @@ class Solution {
         Integer[] one = {1, 2, 3, 4, 5}; // 10개
         Integer[] two = {2, 1, 2, 3, 2, 4, 2, 5}; // 8개
         Integer[] three = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}; // 10개
-        
+
         Queue<Integer> oneQueue = new LinkedList<>(Arrays.asList(one));
         Queue<Integer> twoQueue = new LinkedList<>(Arrays.asList(two));
         Queue<Integer> threeQueue = new LinkedList<>(Arrays.asList(three));
@@ -24,6 +24,8 @@ class Solution {
             if (threeQueue.peek() == ans) {
                 hit[2] += 1;
             }
+
+            //채점 후 답안을 반복
             oneQueue.add(oneQueue.poll());
             twoQueue.add(twoQueue.poll());
             threeQueue.add(threeQueue.poll());
