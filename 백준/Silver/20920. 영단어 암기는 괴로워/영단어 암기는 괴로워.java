@@ -2,11 +2,9 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
-import java.util.Scanner;
 
 public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,11 +19,11 @@ public class Main {
                 return compareByValue;
             }
 
-            if (a.length() == b.length()) {
-                return a.compareTo(b);
+            if (a.length() != b.length()) {
+                return  Integer.compare(b.length(), a.length());
             }
 
-            return Integer.compare(b.length(), a.length());
+            return a.compareTo(b);
         });
 
         String[] s = br.readLine().split(" ");
